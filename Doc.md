@@ -1,4 +1,4 @@
-V5 LOADER — Documentation
+# V5 LOADER — Documentation
 
 Overview
 
@@ -15,10 +15,12 @@ Moves a tool from the player’s Backpack into the Character and equips it.
 
 Example:
 
+```lua
 local ok, err = V5:equip("Medusa's Head")
 if not ok then
     warn("Equip failed:", err)
 end
+```
 
 Notes:
 
@@ -35,9 +37,9 @@ Requires a Humanoid in the character.
 Moves a tool from the Character back to the Backpack.
 
 Example:
-
+```lua
 V5:unequip("Medusa's Head")
-
+```
 Notes:
 
 Tool must be in the Character.
@@ -53,9 +55,9 @@ Returns an error if the tool is not found.
 Activates a tool, simulating the player clicking with it.
 
 Example:
-
+```lua
 V5:activate("Medusa's Head")
-
+```
 Notes:
 
 Tool must be in the Character.
@@ -71,12 +73,12 @@ Only works for tools that implement the Activated event.
 Fetches a Lua script from a raw URL and runs it safely.
 
 Example:
-
+```lua
 local ok, err = V5:load("https://raw.githubusercontent.com/You/Repo/main/script.lua")
 if not ok then
     warn("Load failed:", err)
 end
-
+```
 Notes:
 
 Requires the execution environment to support game:HttpGet.
@@ -92,13 +94,13 @@ Attempts a simple wrapper if the script fails to compile.
 Usage Patterns
 
 Equip → Activate → Unequip
-
+```lua
 V5:equip("Quantum Cloner")
 wait(0.1)
 V5:activate("Quantum Cloner")
 wait(0.2)
 V5:unequip("Quantum Cloner")
-
+```
 Load and run a remote script
 
 local ok, err = V5:load("https://raw.githubusercontent.com/You/Repo/main/toolScript.lua")
