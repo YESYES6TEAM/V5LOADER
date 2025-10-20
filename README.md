@@ -1,3 +1,3 @@
 # V5LOADER
 NEWEST LOADER AFTER V4 LOADER
-# [DOC](https://github.com/YESYES6TEAM/V5LOADER/blob/main/Doc.md)
+[DOC](https://github.com/YESYES6TEAM/V5LOADER/blob/main/Doc.md)
