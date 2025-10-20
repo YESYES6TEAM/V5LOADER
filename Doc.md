@@ -9,6 +9,9 @@ V5 LOADER is a lightweight tool management and script-loading system for Roblox 
 
 # 1. API Reference
 
+```lua
+local V5 = loadstring(game:HttpGet('https://raw.githubusercontent.com/YESYES6TEAM/V5LOADER/refs/heads/main/Source.lua'))()
+```
 # 2. V5:equip(toolName : string) -> (boolean, string?)
 
 Moves a tool from the player’s Backpack into the Character and equips it.
