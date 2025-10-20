@@ -7,9 +7,9 @@ V5 LOADER is a lightweight tool management and script-loading system for Roblox 
 
 ---
 
-API Reference
+# 1. API Reference
 
-# 1. V5:equip(toolName : string) -> (boolean, string?)
+# 2. V5:equip(toolName : string) -> (boolean, string?)
 
 Moves a tool from the player’s Backpack into the Character and equips it.
 
@@ -32,7 +32,7 @@ Requires a Humanoid in the character.
 
 ---
 
-# 2. V5:unequip(toolName : string) -> (boolean, string?)
+# 3. V5:unequip(toolName : string) -> (boolean, string?)
 
 Moves a tool from the Character back to the Backpack.
 
@@ -50,7 +50,7 @@ Returns an error if the tool is not found.
 
 ---
 
-# 3. V5:activate(toolName : string) -> (boolean, string?)
+# 4. V5:activate(toolName : string) -> (boolean, string?)
 
 Activates a tool, simulating the player clicking with it.
 
@@ -68,7 +68,7 @@ Only works for tools that implement the Activated event.
 
 ---
 
-# 4. V5:load(rawLink : string) -> (boolean, string?)
+# 5. V5:load(rawLink : string) -> (boolean, string?)
 
 Fetches a Lua script from a raw URL and runs it safely.
 
