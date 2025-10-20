@@ -9,7 +9,7 @@ V5 LOADER is a lightweight tool management and script-loading system for Roblox 
 
 API Reference
 
-1. V5:equip(toolName : string) -> (boolean, string?)
+# 1. V5:equip(toolName : string) -> (boolean, string?)
 
 Moves a tool from the player’s Backpack into the Character and equips it.
 
@@ -32,7 +32,7 @@ Requires a Humanoid in the character.
 
 ---
 
-2. V5:unequip(toolName : string) -> (boolean, string?)
+# 2. V5:unequip(toolName : string) -> (boolean, string?)
 
 Moves a tool from the Character back to the Backpack.
 
@@ -50,7 +50,7 @@ Returns an error if the tool is not found.
 
 ---
 
-3. V5:activate(toolName : string) -> (boolean, string?)
+# 3. V5:activate(toolName : string) -> (boolean, string?)
 
 Activates a tool, simulating the player clicking with it.
 
@@ -68,7 +68,7 @@ Only works for tools that implement the Activated event.
 
 ---
 
-4. V5:load(rawLink : string) -> (boolean, string?)
+# 4. V5:load(rawLink : string) -> (boolean, string?)
 
 Fetches a Lua script from a raw URL and runs it safely.
 
@@ -91,7 +91,7 @@ Attempts a simple wrapper if the script fails to compile.
 
 ---
 
-Usage Patterns
+# Usage Patterns
 
 Equip → Activate → Unequip
 ```lua
@@ -102,16 +102,16 @@ wait(0.2)
 V5:unequip("Quantum Cloner")
 ```
 Load and run a remote script
-
+```lua
 local ok, err = V5:load("https://raw.githubusercontent.com/You/Repo/main/toolScript.lua")
 if not ok then
     warn(err)
 end
-
+```
 
 ---
 
-Common Errors
+# Common Errors
 
 Tool not found in Backpack — The tool isn’t in the Backpack or the name is incorrect.
 
@@ -127,7 +127,7 @@ Failed to compile script — Script contains syntax errors. V5 tries a simple wr
 
 ---
 
-Tips
+# Tips
 
 Auto-equip tools before activation for convenience.
 
@@ -141,7 +141,7 @@ Wait briefly after equipping tools before activating them if needed.
 
 ---
 
-Changelog
+# Changelog
 
 v1 — Added equip and unequip.
 
